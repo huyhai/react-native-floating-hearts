@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { View, Animated, StyleSheet, ViewPropTypes } from 'react-native'
+import { View, Animated, StyleSheet } from 'react-native'
 
 import HeartShape from './HeartShape'
 
@@ -67,17 +66,6 @@ class FloatingHearts extends Component {
       </View>
     )
   }
-}
-
-FloatingHearts.propTypes = {
-  style: ViewPropTypes.style,
-  count: PropTypes.number,
-  color: PropTypes.string,
-  renderCustomShape: PropTypes.func,
-}
-
-FloatingHearts.defaultProps = {
-  count: -1,
 }
 
 /**
@@ -171,16 +159,6 @@ class AnimatedShape extends Component {
   }
 }
 
-AnimatedShape.propTypes = {
-  height: PropTypes.number.isRequired,
-  onComplete: PropTypes.func.isRequired,
-  style: View.propTypes.style,
-  children: PropTypes.node.isRequired,
-}
-
-AnimatedShape.defaultProps = {
-  onComplete: () => {},
-}
 
 /**
  * Styles
